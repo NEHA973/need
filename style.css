@@ -1,0 +1,701 @@
+/* Ultra-Premium Motivational Daily Routine Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  
+  :root {
+    --gradient-1: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    --gradient-2: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    --gradient-3: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    --gradient-4: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    --dark-text: #2d3748;
+    --light-text: #f8fafc;
+    --transition-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: var(--dark-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(131, 58, 180, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(29, 151, 253, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  /* Dynamic Background */
+  .container::before,
+  .container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: floatBlob 20s infinite alternate var(--transition-smooth);
+  }
+  
+  .container::before {
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.5), rgba(253, 29, 29, 0.3));
+  }
+  
+  .container::after {
+    bottom: -50px;
+    right: -50px;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(29, 151, 253, 0.5), rgba(29, 210, 253, 0.3));
+    animation-delay: 2s;
+  }
+  
+  @keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -20px) scale(1.1); }
+    100% { transform: translate(-20px, 30px) scale(0.9); }
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 60px 30px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    background: var(--gradient-3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 10px rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    animation: headerFloat 6s ease-in-out infinite;
+  }
+  
+  @keyframes headerFloat {
+    0%, 100% { transform: translateY(0) rotateX(0deg); }
+    50% { transform: translateY(-10px) rotateX(2deg); }
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    top: -20%;
+    left: -20%;
+    opacity: 0.3;
+    transform: rotate(10deg);
+    z-index: 0;
+    animation: patternMove 40s linear infinite;
+  }
+  
+  @keyframes patternMove {
+    0% { transform: rotate(10deg) translateY(0); }
+    50% { transform: rotate(15deg) translateY(-5%); }
+    100% { transform: rotate(10deg) translateY(0); }
+  }
+  
+  /* Motivational Shooting Stars */
+  @keyframes shootingStar {
+    0% { 
+      transform: translateX(0) translateY(0) rotate(0deg) scale(0); 
+      opacity: 0;
+    }
+    20% { 
+      transform: translateX(-15vw) translateY(15vh) rotate(45deg) scale(1); 
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(-30vw) translateY(30vh) rotate(45deg) scale(0);
+      opacity: 0;
+    }
+  }
+  
+  header::after {
+    content: "✨";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    animation: shootingStar 8s var(--transition-smooth) infinite;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    animation: bounceIn 1.5s var(--transition-bounce) both;
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    40% { transform: scale(1.1); }
+    60% { transform: scale(0.95); }
+    80% { transform: scale(1.03); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s forwards 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Motivational Quote */
+  header::before {
+    content: "The secret of your success is found in your daily routine. - John C. Maxwell";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: quoteAppear 2s forwards 1.5s;
+  }
+  
+  @keyframes quoteAppear {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 0.9; transform: translateY(0); }
+  }
+  
+  /* Section Styles with Animation Offsets */
+  .section {
+    padding: 40px 35px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s var(--transition-bounce);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07), 0 5px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s var(--transition-smooth) forwards;
+  }
+  
+  .section:nth-child(2) { animation-delay: 0.2s; }
+  .section:nth-child(3) { animation-delay: 0.4s; }
+  .section:nth-child(4) { animation-delay: 0.6s; }
+  .section:nth-child(5) { animation-delay: 0.8s; }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .section:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Motivational Ribbon */
+  .section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-1);
+    opacity: 0.85;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.6s var(--transition-smooth);
+  }
+  
+  .section:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Section Titles with Animated Icons */
+  .section h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: var(--dark-text);
+    font-weight: 600;
+    padding-left: 45px;
+  }
+  
+  .section h2::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+  }
+  
+  .section:nth-child(2) h2::before { content: "🕔"; }
+  .section:nth-child(3) h2::before { content: "🍽️"; }
+  .section:nth-child(4) h2::before { content: "💧"; }
+  .section:nth-child(5) h2::before { content: "🌙"; }
+  
+  @keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.1); }
+    100% { transform: translateY(-50%) scale(1); }
+  }
+  
+  .section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40%;
+    height: 4px;
+    background: var(--gradient-1);
+    border-radius: 4px;
+    transition: width 0.5s var(--transition-smooth);
+  }
+  
+  .section:hover h2::after {
+    width: 100%;
+  }
+  
+  .alt {
+    background: rgba(246, 249, 252, 0.9);
+  }
+  
+  .alt::before, .alt h2::after {
+    background: var(--gradient-2);
+  }
+  
+  /* Content with Image Layout */
+  .con-img {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .con {
+    flex: 1.2;
+  }
+  
+  .img-con {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  /* 3D Glow Effect */
+  .img-con::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #8a2387, #e94057, #f27121);
+    z-index: -1;
+    top: 5%;
+    left: 5%;
+    filter: blur(15px);
+    opacity: 0.6;
+    transform: scale(0.95);
+    transition: all 0.5s var(--transition-smooth);
+    animation: glowPulse 3s infinite alternate;
+  }
+  
+  @keyframes glowPulse {
+    0% { opacity: 0.4; transform: scale(0.95); filter: blur(15px); }
+    100% { opacity: 0.7; transform: scale(1); filter: blur(20px); }
+  }
+  
+  .section:hover .img-con::before {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  
+  .img-con img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s var(--transition-bounce);
+    z-index: 1;
+    position: relative;
+    transform: rotateY(0deg);
+  }
+  
+  .img-con:hover img {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* List Styles with Animation */
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    padding-left: 50px;
+    position: relative;
+    font-size: 1.1rem;
+    transition: all 0.4s var(--transition-smooth);
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: listItemIn 0.5s forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.15s + 0.5s);
+  }
+  
+  li:nth-child(1) { --item-index: 1; }
+  li:nth-child(2) { --item-index: 2; }
+  li:nth-child(3) { --item-index: 3; }
+  li:nth-child(4) { --item-index: 4; }
+  li:nth-child(5) { --item-index: 5; }
+  
+  @keyframes listItemIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    opacity: 0.8;
+    transition: all 0.4s var(--transition-bounce);
+    z-index: 0;
+  }
+  
+  li:after {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+  
+  li:nth-child(1):after { content: "⏰"; }
+  li:nth-child(2):after { content: "🍹"; }
+  li:nth-child(3):after { content: "🏋️‍♂️"; }
+  li:nth-child(4):after { content: "🛁"; }
+  li:nth-child(5):after { content: "☕"; }
+  
+  .evening-list li:nth-child(1):after { content: "🍛"; }
+  .evening-list li:nth-child(2):after { content: "🚶"; }
+  .evening-list li:nth-child(3):after { content: "🥛"; }
+  .evening-list li:nth-child(4):after { content: "🛌"; }
+  
+  .alt ul li:before {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  }
+  
+  li:hover {
+    transform: translateX(10px);
+    color: #1a202c;
+  }
+  
+  li:hover:before {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Water Section with Animation */
+  .section:nth-child(4) {
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+    text-align: center;
+    padding: 60px 30px;
+    overflow: hidden;
+  }
+  
+  .water {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(to right, #1a78c2, #24d292);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    padding: 20px 0;
+    display: inline-block;
+  }
+  
+  /* Animated Water Wave Effect */
+  .section:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: 
+      linear-gradient(transparent, rgba(52, 152, 219, 0.05)),
+      repeating-linear-gradient(
+        90deg,
+        rgba(52, 152, 219, 0.1) 0%,
+        rgba(46, 204, 113, 0.1) 20%,
+        rgba(52, 152, 219, 0.1) 40%
+      );
+    z-index: -1;
+    transform-origin: bottom;
+    animation: waterWave 8s linear infinite;
+  }
+  
+  @keyframes waterWave {
+    0% { transform: scaleY(1) translateX(0); }
+    50% { transform: scaleY(1.1) translateX(-2%); }
+    100% { transform: scaleY(1) translateX(0); }
+  }
+  
+  /* Animated Water Droplets */
+  .water::before, .water::after {
+    content: "💧";
+    position: absolute;
+    animation: waterDropFloat 4s ease-in-out infinite;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  .water::before {
+    font-size: 2.5rem;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .water::after {
+    font-size: 2.5rem;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 2s;
+  }
+  
+  @keyframes waterDropFloat {
+    0%, 100% {
+      transform: translateY(-50%) scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(-30%) scale(1.1);
+      opacity: 1;
+    }
+  }
+  
+  /* Motivational Message in Water Section */
+  .section:nth-child(4)::before {
+    content: "Stay hydrated, stay energized!";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(26, 120, 194, 0.7);
+    font-style: italic;
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  /* Evening List - Card Design */
+  .evening-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    perspective: 1000px;
+  }
+  
+  .evening-list li {
+    background: white;
+    padding: 25px 20px 25px 60px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    text-align: left;
+    position: relative;
+    transition: all 0.4s var(--transition-bounce);
+    transform-origin: center;
+    transform: rotateX(10deg) translateY(20px);
+    opacity: 0;
+    animation: cardReveal 0.6s forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.2s + 1s);
+  }
+  
+  @keyframes cardReveal {
+    to { opacity: 1; transform: rotateX(0) translateY(0); }
+  }
+  
+  .evening-list li:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .evening-list li:before {
+    top: 25px;
+    transform: none;
+  }
+  
+  /* Motivational Messages on Card Hover */
+  .evening-list li::after {
+    font-size: 1.5rem;
+    top: 25px;
+    left: 12px;
+  }
+  
+  .evening-list li:hover::before {
+    transform: scale(1.2);
+  }
+  
+  .evening-list li:nth-child(1)::before { background: linear-gradient(135deg, #fad961, #f76b1c); }
+  .evening-list li:nth-child(2)::before { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+  .evening-list li:nth-child(3)::before { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+  .evening-list li:nth-child(4)::before { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+  
+  /* Footer with Motivational Effect */
+  .footer {
+    text-align: center;
+    padding: 60px 0 50px;
+    color: #4a5568;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 600;
+    margin-top: 70px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 2s;
+  }
+  
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #f6d365, #fda085, transparent);
+    border-radius: 2px;
+  }
+  
+  .tagline {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #718096;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  /* Animated Footer Sparkle */
+  .footer::after {
+    content: "✨";
+    position: absolute;
+    right: 30%;
+    bottom: 30px;
+    font-size: 1.5rem;
+    animation: sparkle 4s infinite;
+  }
+  
+  .tagline::after {
+    content: "✨";
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    font-size: 1.5rem;
+    animation: sparkle 4s infinite 2s;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+  }
+  
+  /* Motivational Elements */
+  .section:nth-child(2)::after {
+    content: ""Morning rituals set the tone for your entire day"";
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 200px;
+    text-align: right;
+  }
+  
+  .section:nth-child(3)::after {
+    content: ""Nourish your body, fuel your ambitions"";
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 200px;
+    text-align: right;
+  }
+  
+  .section:nth-child(5)::after {
+    content: "Evening habits create tomorrow's success";
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 200px;
+    text-align: right;
+  }
+  
+  
